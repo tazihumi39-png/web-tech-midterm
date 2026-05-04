@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <h1>Student Task Manager</h1>
+</header>
+
+<section class="form-section">
+    <form id="taskForm">
+        <input type="text" id="taskName" placeholder="Task Name" required>
+
+        <select id="subject">
+            <option value="Math">Math</option>
+            <option value="Physics">Physics</option>
+            <option value="CS">Computer Science</option>
+        </select>
+
+        <input type="date" id="dueDate" required>
+
+        <button type="submit">Add Task</button>
+    </form>
+</section>
+
+<section class="controls">
+    <select id="filterSubject">
+        <option value="All">All Subjects</option>
+        <option value="Math">Math</option>
+        <option value="Physics">Physics</option>
+        <option value="CS">CS</option>
+    </select>
+
+    <button onclick="sortTasks()">Sort by Date</button>
+</section>
+
+<section class="task-list">
+    <table>
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Subject</th>
+                <th>Due Date</th>
+            </tr>
+        </thead>
+        <tbody id="taskTable"></tbody>
+    </table>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+    
